@@ -661,18 +661,18 @@ const Courses = () => {
       </div>
 
       {/* Main Content */}
-      <main className="relative px-4 py-16 md:py-24 max-w-7xl mx-auto">
+      <main className="relative px-4 pt-24 pb-16 md:py-24 max-w-7xl mx-auto">
         {/* Header with Filter */}
-        <div className="text-center mb-16 space-y-8">
+        <div className="text-center mb-8 md:mb-16 space-y-4 md:space-y-8">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1E40AF] via-[#2563EB] to-[#3B82F6]">
+            <h1 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1E40AF] via-[#2563EB] to-[#3B82F6]">
               Partner Universities
             </h1>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
               Explore our network of prestigious universities across the globe.
               We partner with top-ranked institutions to provide you with the
               best educational opportunities.
@@ -685,16 +685,16 @@ const Courses = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
-          className="mb-12"
+          className="mb-8 md:mb-12"
         >
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {countries.map((country) => (
               <motion.button
                 key={country.id}
                 onClick={() => setSelectedCountry(country.id)}
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 whileTap={{ scale: 0.95, transition: { duration: 0.1 } }}
-                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
+                className={`px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
                   selectedCountry === country.id
                     ? "bg-gradient-to-r from-[#2563EB] to-[#3B82F6] text-white shadow-md"
                     : "bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-[#3B82F6]/30"
@@ -716,14 +716,20 @@ const Courses = () => {
           {isLoading ? (
             // Loading Skeleton
             [...Array(6)].map((_, idx) => (
-              <div key={idx} className="bg-white rounded-2xl overflow-hidden animate-pulse">
+              <div
+                key={idx}
+                className="bg-white rounded-2xl overflow-hidden animate-pulse"
+              >
                 <div className="h-52 bg-gray-200"></div>
                 <div className="p-6 space-y-4">
                   <div className="h-6 bg-gray-200 rounded w-3/4"></div>
                   <div className="h-4 bg-gray-200 rounded w-1/2"></div>
                   <div className="space-y-2">
                     {[...Array(3)].map((_, i) => (
-                      <div key={i} className="h-4 bg-gray-200 rounded w-full"></div>
+                      <div
+                        key={i}
+                        className="h-4 bg-gray-200 rounded w-full"
+                      ></div>
                     ))}
                   </div>
                 </div>
@@ -738,8 +744,12 @@ const Courses = () => {
                 className="space-y-4"
               >
                 <div className="text-6xl">🔍</div>
-                <h3 className="text-xl font-semibold text-gray-800">No universities found</h3>
-                <p className="text-gray-600">Try adjusting your search or filters</p>
+                <h3 className="text-xl font-semibold text-gray-800">
+                  No universities found
+                </h3>
+                <p className="text-gray-600">
+                  Try adjusting your search or filters
+                </p>
               </motion.div>
             </div>
           ) : (

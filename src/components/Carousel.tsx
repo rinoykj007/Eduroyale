@@ -141,23 +141,23 @@ export default function Carousel() {
                   transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
                 }}
               >
-                <div className="mb-4">
-                  <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold mb-2">
+                <div className="mb-2 sm:mb-4">
+                  <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-1 sm:mb-2">
                     {item.place}
                   </h2>
                 </div>
-                <div className="space-y-1 sm:space-y-2">
-                  <h1 className="text-white text-4xl md:text-5xl lg:text-7xl font-bold mb-2">
+                <div className="space-y-0.5 sm:space-y-1 md:space-y-2">
+                  <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold">
                     {item.title}
                   </h1>
-                  <h1 className="text-white text-4xl md:text-5xl lg:text-7xl font-bold mb-4">
+                  <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-2 sm:mb-4">
                     {item.title2}
                   </h1>
                 </div>
-                <div className="mt-4 sm:mt-8 w-full md:w-[600px] text-lg md:text-xl lg:text-2xl leading-relaxed max-w-[90vw] text-[#FFFFFF] font-['Manrope'] tracking-wide font-medium">
+                <div className="mt-2 sm:mt-4 md:mt-8 w-full md:w-[600px] text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-[90vw] text-[#FFFFFF] font-['Manrope'] tracking-wide font-medium">
                   {item.description}
                 </div>
-                <div className="mt-8 md:mt-10 flex items-center gap-6">
+                <div className="mt-4 sm:mt-6 md:mt-10 flex items-center gap-4 sm:gap-6">
                   <button className="w-12 h-12 rounded-full bg-white/10 border-2 border-white/30 grid place-items-center hover:bg-white/20 transition-all duration-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

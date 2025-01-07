@@ -1,32 +1,55 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesDropdown, setServicesDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Close dropdowns when route changes
+  useEffect(() => {
+    setIsOpen(false);
+    setServicesDropdown(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node) &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
         setServicesDropdown(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
-  const toggleMenu = () => {
+  const toggleMenu = (e: React.MouseEvent) => {
+    e.stopPropagation();
     setIsOpen(!isOpen);
+    if (servicesDropdown) setServicesDropdown(false);
   };
 
   const toggleServicesDropdown = (e: React.MouseEvent) => {
     e.stopPropagation();
     setServicesDropdown(!servicesDropdown);
+  };
+
+  const handleServiceClick = (path: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigate(path);
+    setServicesDropdown(false);
+    setIsOpen(false);
   };
 
   return (
@@ -237,8 +260,12 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-20 w-full font-['Plus_Jakarta_Sans']">
-          <div className="bg-white rounded-3xl shadow-lg border border-gray-200 mx-2">
+        <div 
+          ref={mobileMenuRef}
+          className="md:hidden fixed inset-x-0 top-20 mx-2 z-[100] font-['Plus_Jakarta_Sans']"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="bg-white rounded-3xl shadow-lg border border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
                 to="/"
@@ -277,77 +304,25 @@ const Navbar = () => {
                 </svg>
               </button>
               {servicesDropdown && (
-                <div className="pl-4">
-                  <Link
-                    to="/services/expert-counseling"
-                    className="block px-3 py-2 text-gray-800 hover:bg-blue-50 rounded-md"
-                    onClick={() => {
-                      setServicesDropdown(false);
-                      setIsOpen(false);
-                    }}
-                  >
-                    Expert Counseling
-                  </Link>
-                  <Link
-                    to="/services/course-selection"
-                    className="block px-3 py-2 text-gray-800 hover:bg-blue-50 rounded-md"
-                    onClick={() => {
-                      setServicesDropdown(false);
-                      setIsOpen(false);
-                    }}
-                  >
-                    Course Selection
-                  </Link>
-                  <Link
-                    to="/services/country-selection"
-                    className="block px-3 py-2 text-gray-800 hover:bg-blue-50 rounded-md"
-                    onClick={() => {
-                      setServicesDropdown(false);
-                      setIsOpen(false);
-                    }}
-                  >
-                    Country Selection
-                  </Link>
-                  <Link
-                    to="/services/bank-loan"
-                    className="block px-3 py-2 text-gray-800 hover:bg-blue-50 rounded-md"
-                    onClick={() => {
-                      setServicesDropdown(false);
-                      setIsOpen(false);
-                    }}
-                  >
-                    Bank Loan
-                  </Link>
-                  <Link
-                    to="/services/post-visa-assistance"
-                    className="block px-3 py-2 text-gray-800 hover:bg-blue-50 rounded-md"
-                    onClick={() => {
-                      setServicesDropdown(false);
-                      setIsOpen(false);
-                    }}
-                  >
-                    Post-Visa Assistance
-                  </Link>
-                  <Link
-                    to="/services/travel-assistance"
-                    className="block px-3 py-2 text-gray-800 hover:bg-blue-50 rounded-md"
-                    onClick={() => {
-                      setServicesDropdown(false);
-                      setIsOpen(false);
-                    }}
-                  >
-                    Travel Assistance
-                  </Link>
-                  <Link
-                    to="/services/free-ielts-training"
-                    className="block px-3 py-2 text-gray-800 hover:bg-blue-50 rounded-md"
-                    onClick={() => {
-                      setServicesDropdown(false);
-                      setIsOpen(false);
-                    }}
-                  >
-                    Free IELTS Training
-                  </Link>
+                <div className="pl-4 space-y-1">
+                  {[
+                    { path: '/services/expert-counseling', label: 'Expert Counseling' },
+                    { path: '/services/course-selection', label: 'Course Selection' },
+                    { path: '/services/country-selection', label: 'Country Selection' },
+                    { path: '/services/bank-loan', label: 'Bank Loan' },
+                    { path: '/services/visa-guidance', label: 'Visa Guidance' },
+                    { path: '/services/post-visa-assistance', label: 'Post-Visa Assistance' },
+                    { path: '/services/travel-assistance', label: 'Travel Assistance' },
+                    { path: '/services/free-ielts-training', label: 'Free IELTS Training' },
+                  ].map((service) => (
+                    <button
+                      key={service.path}
+                      onClick={(e) => handleServiceClick(service.path, e)}
+                      className="w-full text-left px-3 py-2 text-gray-800 hover:bg-blue-50 rounded-md"
+                    >
+                      {service.label}
+                    </button>
+                  ))}
                 </div>
               )}
               <Link

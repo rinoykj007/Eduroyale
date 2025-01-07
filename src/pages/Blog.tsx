@@ -223,32 +223,34 @@ const Blog: React.FC = () => {
 
   return (
     <>
-      <div className="grid grid-cols-4 gap-5 px-5 pt-20 font-['Oswald']">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 px-4 md:px-5 pt-20 md:pt-24 mb-8 md:mb-10 font-['Oswald']">
         {blogPosts.map((post) => (
           <article
             key={post.id}
             onClick={(e) => handlePostClick(post, e)}
-            className={`h-[40vh] bg-white relative
-              ${post.id === 5 ? "col-span-2" : ""}
-              ${post.id === 7 ? "row-span-2 h-full" : ""}
-              ${post.id === 11 ? "col-span-2" : ""}
-              ${post.id === 14 ? "row-span-2 h-full" : ""}`}
+            className={`min-h-[300px] md:h-[40vh] bg-white relative
+              ${post.id === 5 ? "sm:col-span-2" : ""}
+              ${post.id === 7 ? "sm:row-span-2 sm:h-full" : ""}
+              ${post.id === 11 ? "sm:col-span-2" : ""}
+              ${post.id === 14 ? "sm:row-span-2 sm:h-full" : ""}`}
           >
             {post.quote ? (
               <blockquote
-                className="h-full flex items-center justify-center text-2xl p-5 box-border hover:bg-[#ff5722] hover:text-white hover:cursor-pointer"
+                className="h-full flex items-center justify-center text-lg md:text-2xl p-3 md:p-5 box-border hover:bg-[#ff5722] hover:text-white hover:cursor-pointer"
                 data-url={post.url}
               >
                 {post.quote}
               </blockquote>
             ) : (
               <figure className="relative h-full group cursor-pointer">
-                <div className="absolute z-10 bg-[#f5f5f5] p-[10px_16px] text-center group-hover:bg-[#ff5722]">
-                  <span className="text-sm font-light">{post.date.month}</span>
-                  <span className="text-2xl font-semibold block">
+                <div className="absolute z-10 bg-[#f5f5f5] p-[8px_12px] md:p-[10px_16px] text-center group-hover:bg-[#ff5722]">
+                  <span className="text-xs md:text-sm font-light">
+                    {post.date.month}
+                  </span>
+                  <span className="text-xl md:text-2xl font-semibold block">
                     {post.date.day}
                   </span>
-                  <span className="text-sm font-light text-[#ff5722] group-hover:text-white">
+                  <span className="text-xs md:text-sm font-light text-[#ff5722] group-hover:text-white">
                     {post.date.year}
                   </span>
                 </div>
@@ -257,9 +259,9 @@ const Blog: React.FC = () => {
                   alt={post.title}
                   className="h-full w-full object-cover relative group-hover:brightness-[0.8] transition-[filter] duration-500"
                 />
-                <figcaption className="absolute bottom-0 bg-gradient-to-t from-black/40 to-transparent w-full p-5 h-[90px] box-border text-center text-2xl uppercase text-white shadow-[0px_1px_1px_rgb(0_0_0_/_50%)] transition-[height] duration-200 flex flex-col group-hover:h-[110px]">
-                  <span>{post.title}</span>
-                  <span className="text-sm normal-case font-light">
+                <figcaption className="absolute bottom-0 bg-gradient-to-t from-black/40 to-transparent w-full p-3 md:p-5 h-[80px] md:h-[90px] box-border text-center text-lg md:text-2xl uppercase text-white shadow-[0px_1px_1px_rgb(0_0_0_/_50%)] transition-[height] duration-200 flex flex-col group-hover:h-[100px] md:group-hover:h-[110px]">
+                  <span className="line-clamp-2">{post.title}</span>
+                  <span className="text-xs md:text-sm normal-case font-light mt-1">
                     By {post.author} | {post.category}
                   </span>
                 </figcaption>
@@ -274,7 +276,7 @@ const Blog: React.FC = () => {
             className="fixed inset-0 bg-black/70 z-[999]"
             onClick={closePopup}
           />
-          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 max-w-[500px] p-5 bg-white shadow-[0px_5px_15px_rgba(0,0,0,0.3)] z-[1000] transition-[top,left] duration-300">
+          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] md:w-4/5 max-w-[500px] p-4 md:p-5 bg-white shadow-[0px_5px_15px_rgba(0,0,0,0.3)] z-[1000] transition-[top,left] duration-300 max-h-[90vh] overflow-y-auto">
             <span
               className="material-symbols-outlined absolute -right-[5px] -top-[38px] text-white text-3xl cursor-pointer"
               onClick={closePopup}
@@ -288,18 +290,18 @@ const Blog: React.FC = () => {
                     <img
                       src={selectedPost.image}
                       alt={selectedPost.title}
-                      className="max-w-full h-[362px] mb-5 mx-auto flex object-cover"
+                      className="max-w-full h-[200px] md:h-[362px] mb-5 mx-auto flex object-cover"
                     />
                   )}
-                  <div className="text-2xl font-['Oswald'] inline-block">
+                  <div className="text-xl md:text-2xl font-['Oswald'] inline-block">
                     {selectedPost.title}
                   </div>
-                  <div className="flex justify-between items-center mt-4">
-                    <div className="flex">
-                      <div className="dt-popup">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-4 gap-3">
+                    <div className="flex flex-col md:flex-row md:gap-2">
+                      <div className="dt-popup text-sm md:text-base">
                         {`${selectedPost.date.month} ${selectedPost.date.day} ${selectedPost.date.year}`}
                       </div>
-                      <div>
+                      <div className="text-sm md:text-base">
                         By {selectedPost.author} | {selectedPost.category}
                       </div>
                     </div>
@@ -308,15 +310,17 @@ const Blog: React.FC = () => {
                         e.stopPropagation();
                         const message = `Hi, I'd like to know more about the article: "${selectedPost.title}"`;
                         const encodedMessage = encodeURIComponent(message);
-                        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
+                        window.open(
+                          `https://api.whatsapp.com/send?text=${encodedMessage}`,
+                          "_blank"
+                        );
                       }}
-                      className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors duration-300"
+                      className="flex items-center justify-center bg-green-500 text-white p-2 rounded-lg hover:bg-green-600 transition-colors duration-300 w-auto"
                     >
                       <FaShare className="text-sm" />
-                      <span>Share on WhatsApp</span>
                     </button>
                   </div>
-                  <p className="font-['Roboto'] font-light text-sm leading-[22px] mt-[14px]">
+                  <p className="font-['Roboto'] font-light text-xs md:text-sm leading-[20px] md:leading-[22px] mt-[14px]">
                     Lorem ipsum dolor sit amet, nam sale civibus conclusionemque
                     et, ad qui omnes audire eloquentiam, at vis lucilius
                     expetenda. Est ad meis putant suscipiantur, cu vix vidisse
@@ -328,7 +332,7 @@ const Blog: React.FC = () => {
           </div>
         </>
       )}
-      <WhatsAppButton 
+      <WhatsAppButton
         phoneNumber={WHATSAPP_NUMBER}
         message="Hi, I have a question about one of your blog posts. Can you help me?"
       />
