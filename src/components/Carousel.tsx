@@ -141,20 +141,20 @@ export default function Carousel() {
                   transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
                 }}
               >
-                <div className="mb-[clamp(0.5rem,2vh,2rem)]">
-                  <h2 className="text-white text-[clamp(1rem,2.5vw,2.5rem)] font-semibold mb-[clamp(0.25rem,1vh,1rem)]">
+                <div>
+                  <h2 className="text-white text-[clamp(1rem,2.5vw,2.5rem)] font-semibold">
                     {item.place}
                   </h2>
                 </div>
-                <div className="space-y-[clamp(0.25rem,1vh,1rem)]">
+                <div className="-mt-2 sm:-mt-3">
                   <h1 className="text-white text-[clamp(2rem,5vw,5rem)] font-bold">
                     {item.title}
                   </h1>
-                  <h1 className="text-white text-[clamp(2rem,5vw,5rem)] font-bold mb-[clamp(0.5rem,2vh,2rem)]">
+                  <h1 className="text-white text-[clamp(2rem,5vw,5rem)] font-bold -mt-3 sm:-mt-5">
                     {item.title2}
                   </h1>
                 </div>
-                <div className="mt-[clamp(1rem,3vh,3rem)] w-full text-[clamp(0.875rem,1.25vw,1.25rem)] leading-relaxed text-[#FFFFFF] font-['Manrope'] tracking-wide font-medium">
+                <div className="-mt-2 sm:-mt-3 w-full text-[clamp(1rem,1.5vw,1.5rem)] leading-relaxed text-[#FFFFFF] font-['Manrope'] tracking-wide font-medium">
                   {item.description}
                 </div>
                 <div className="mt-[clamp(1rem,4vh,4rem)] flex items-center gap-[clamp(1rem,2vw,2rem)]">
