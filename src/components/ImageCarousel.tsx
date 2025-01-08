@@ -14,34 +14,34 @@ const ImageCarousel = () => {
     autoplay: true,
     autoplaySpeed: 0,
     cssEase: "linear",
-    pauseOnHover: false,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1536,
         settings: {
           slidesToShow: 4,
-          speed: 4000,
+          speed: 3000,
         },
       },
       {
         breakpoint: 1280,
         settings: {
           slidesToShow: 3,
-          speed: 3500,
+          speed: 3000,
         },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          speed: 3000,
+          speed: 2500,
         },
       },
       {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
-          speed: 2500,
+          speed: 2000,
         },
       },
     ],
@@ -98,93 +98,34 @@ const ImageCarousel = () => {
   const images = imageHashes.map((hash, index) => ({
     id: index + 1,
     src: `https://www.eduroyale.com/images/university_logo/thumb${hash}.jpg`,
-    href: `course-list.php?list-courses=${index + 1}`,
   }));
 
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoaded(true);
-    }, 1000);
-
-    return () => clearTimeout(timer);
+    setLoaded(true);
   }, []);
 
   return (
-    <div className="w-full px-2 py-4 bg-white">
+    <div>
       <div className="w-full bg-white p-5 rounded-lg font-outfit tracking-tight text-3xl font-extrabold leading-snug text-center mb-8 shadow-md transition-all duration-300">
-        {/* Animated Letters */}
-        {['W', 'e', "'", 'r', 'e', ' '].map((letter, index) => (
-          <span 
-            key={index}
-            className={`inline-block transform ${
-              loaded ? 'translate-y-0 opacity-100 blur-none' : 'translate-y-[-200px] opacity-0 blur-sm'
-            } transition-all duration-[5s] bg-gradient-to-br from-blue-500 to-purple-600 bg-clip-text text-transparent`}
-            style={{ transitionDelay: `${index * 100}ms` }}
-          >
-            {letter}
-          </span>
-        ))}
-        
-        {/* Main Text Content */}
-        <span className={`inline-block font-jakarta font-medium text-xl tracking-tight text-gray-600 transform ${
-          loaded ? 'translate-y-0 opacity-100' : 'translate-y-[100px] opacity-0'
-        } transition-all duration-[5s] ease-[cubic-bezier(0.43,0.1,0.57,0.9)]`}>
-          and the only ones excited about{" "}
-          <span className="bg-gradient-to-br from-amber-500 to-red-500 bg-clip-text text-transparent font-bold">
-            EDUROYALE
-          </span>...
-        </span>
-
-        <br />
-
-        <span className={`inline-block font-jakarta font-medium text-xl tracking-tight text-gray-600 transform ${
-          loaded ? 'translate-y-0 opacity-100' : 'translate-y-[100px] opacity-0'
-        } transition-all duration-[5s] ease-[cubic-bezier(0.43,0.1,0.57,0.9)]`}>
-          {['1', '2', '5'].map((num) => (
-            <span key={num} className="bg-gradient-to-br from-cyan-500 to-blue-500 bg-clip-text text-transparent font-bold">
-              {num}
-            </span>
-          ))}{" "}
-          Universities in{" "}
-          <span className="bg-gradient-to-br from-cyan-500 to-blue-500 bg-clip-text text-transparent font-bold">
-            8
-          </span>{" "}
-          countries use{" "}
-          <span className="bg-gradient-to-br from-amber-500 to-red-500 bg-clip-text text-transparent font-bold">
-            EDUROYALE
-          </span>.
-        </span>
-
-        <br />
-
-        <span className={`inline-block font-jakarta font-medium text-xl tracking-tight text-gray-600 transform ${
-          loaded ? 'translate-y-0 opacity-100' : 'translate-y-[100px] opacity-0'
-        } transition-all duration-[5s] ease-[cubic-bezier(0.43,0.1,0.57,0.9)]`}>
-          Meet our Universities.
+        <span className="bg-gradient-to-br from-amber-500 to-red-500 bg-clip-text text-transparent">
+          Our Partner Universities
         </span>
       </div>
-
-      {/* Slider Section */}
-      <div className="overflow-hidden">
-        <Slider {...settings} className="custom-slider">
-          {images.map((image) => (
-            <div key={image.id} className="px-2">
-              <a
-                href={image.href}
-                className="block h-32 sm:h-40 md:h-30 lg:h-48 xl:h-40 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-4"
-              >
-                <img
-                  src={image.src}
-                  alt=""
-                  className="max-w-[90%] max-h-[80%] object-contain filter hover:brightness-110 transition-all duration-300"
-                />
-              </a>
+      <Slider {...settings} className="custom-slider w-full">
+        {images.map((image, index) => (
+          <div key={image.id} className="px-4">
+            <div className="flex items-center justify-center min-h-[150px]">
+              <img
+                src={image.src}
+                alt={`University logo ${index + 1}`}
+                className="w-[150px] h-[150px] object-contain"
+              />
             </div>
-          ))}
-        </Slider>
-      </div>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };

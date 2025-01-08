@@ -7,8 +7,8 @@ import loanAnimation from "../../assets/animations/Loan_Assistance.json";
 
 const BankLoan = () => {
   return (
-    <div className="bg-gradient-to-br from-blue-50 via-white to-blue-50 min-h-screen text-gray-800 font-moderustic">
-      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-br from-blue-50 via-white to-blue-50 min-h-screen text-gray-800 font-moderustic pt-16 md:pt-20">
+      <div className="max-w-7xl mx-auto px-4 py-8 sm:py-16 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-24">
           <motion.div
@@ -18,7 +18,9 @@ const BankLoan = () => {
             className="text-left lg:w-1/2"
           >
             <div className="mb-6 inline-block">
-              <span className="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">Education Loans</span>
+              <span className="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">
+                Education Loans
+              </span>
             </div>
             <h1 className="text-5xl md:text-6xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400 leading-tight tracking-tight">
               Education Loan Assistance
@@ -59,7 +61,8 @@ const BankLoan = () => {
             Comprehensive Loan Features
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We offer a range of education loan features designed to support your academic journey
+            We offer a range of education loan features designed to support your
+            academic journey
           </p>
         </motion.div>
 
@@ -112,11 +115,15 @@ const BankLoan = () => {
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100/40 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-all duration-300"></div>
               <div className="relative z-10">
-                <div className="text-4xl mb-6 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl w-16 h-16 flex items-center justify-center text-white shadow-lg">{feature.icon}</div>
+                <div className="text-4xl mb-6 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl w-16 h-16 flex items-center justify-center text-white shadow-lg">
+                  {feature.icon}
+                </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
             </motion.div>
           ))}
@@ -133,7 +140,8 @@ const BankLoan = () => {
             Simple Application Process
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Follow our streamlined process to get your education loan approved quickly
+            Follow our streamlined process to get your education loan approved
+            quickly
           </p>
         </motion.div>
 
@@ -176,12 +184,24 @@ const BankLoan = () => {
                 <h3 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                   {process.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{process.description}</p>
+                <p className="text-gray-600 leading-relaxed">
+                  {process.description}
+                </p>
               </div>
               {index < 3 && (
                 <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-blue-300">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <svg
+                    className="w-8 h-8"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
                   </svg>
                 </div>
               )}
@@ -214,7 +234,9 @@ const BankLoan = () => {
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100/40 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-all duration-300"></div>
             <div className="relative z-10">
-              <div className="text-4xl mb-6 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl w-16 h-16 flex items-center justify-center text-white shadow-lg">📚</div>
+              <div className="text-4xl mb-6 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl w-16 h-16 flex items-center justify-center text-white shadow-lg">
+                📚
+              </div>
               <h3 className="text-xl font-bold mb-6 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                 Academic Documents
               </h3>
@@ -225,7 +247,10 @@ const BankLoan = () => {
                   "Admission letter from university",
                   "Course details and duration",
                 ].map((doc, index) => (
-                  <li key={index} className="text-gray-600 flex items-center group">
+                  <li
+                    key={index}
+                    className="text-gray-600 flex items-center group"
+                  >
                     <div className="w-2 h-2 bg-gradient-to-br from-blue-600 to-blue-400 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
                     {doc}
                   </li>
@@ -242,7 +267,9 @@ const BankLoan = () => {
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100/40 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-all duration-300"></div>
             <div className="relative z-10">
-              <div className="text-4xl mb-6 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl w-16 h-16 flex items-center justify-center text-white shadow-lg">💼</div>
+              <div className="text-4xl mb-6 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl w-16 h-16 flex items-center justify-center text-white shadow-lg">
+                💼
+              </div>
               <h3 className="text-xl font-bold mb-6 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                 Financial Documents
               </h3>
@@ -253,7 +280,10 @@ const BankLoan = () => {
                   "Income tax returns",
                   "Collateral documents (if applicable)",
                 ].map((doc, index) => (
-                  <li key={index} className="text-gray-600 flex items-center group">
+                  <li
+                    key={index}
+                    className="text-gray-600 flex items-center group"
+                  >
                     <div className="w-2 h-2 bg-gradient-to-br from-blue-600 to-blue-400 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
                     {doc}
                   </li>
@@ -272,7 +302,9 @@ const BankLoan = () => {
         >
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDU2IDAgTCAwIDAgMCAxMDAgNTYgMTAwIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIgc3Ryb2tlLXdpZHRoPSIxLjUiPjwvcGF0aD48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiPjwvcmVjdD48L3N2Zz4=')] opacity-10"></div>
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Journey?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Start Your Journey?
+            </h2>
             <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Contact us today to begin your education loan application process
             </p>

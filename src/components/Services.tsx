@@ -9,7 +9,13 @@ import {
   FaHome,
 } from "react-icons/fa";
 
-const services = [
+interface ServiceType {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+}
+
+const services: ServiceType[] = [
   {
     icon: FaGraduationCap,
     title: "Education Counseling",
@@ -101,7 +107,7 @@ const AnimatedBackground = () => (
   </svg>
 );
 
-const getCardStyle = (index) => {
+const getCardStyle = (index: number) => {
   const colors = [
     "rgb(255, 227, 227)", // Soft Pink
     "rgb(201, 233, 210)", // Sage Green
@@ -113,7 +119,13 @@ const getCardStyle = (index) => {
   return colors[index];
 };
 
-const ServiceCard = ({ service, index }) => {
+const ServiceCard = ({
+  service,
+  index,
+}: {
+  service: ServiceType;
+  index: number;
+}) => {
   const controls = useAnimation();
   const ref = React.useRef(null);
   const isInView = useInView(ref, {
@@ -178,7 +190,7 @@ const ServiceCard = ({ service, index }) => {
 
 const Services: React.FC = () => {
   return (
-    <section className="relative py-16 overflow-hidden">
+    <section className="relative py-16 overflow-hidden px-4">
       <AnimatedBackground />
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl font-bold text-center mb-12 text-[#2C3E50] tracking-tight">

@@ -7,16 +7,20 @@ import { WHATSAPP_NUMBER } from "../../config/contact";
 
 const CourseSelection = () => {
   const handleGetStarted = () => {
-    const message = "Hi, I'm interested in getting guidance for Course Selection. Can you help me choose the right course?";
+    const message =
+      "Hi, I'm interested in getting guidance for Course Selection. Can you help me choose the right course?";
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`,
+      "_blank"
+    );
   };
 
   return (
     <div className="bg-gradient-to-b from-white via-[#F7FAFC] to-[#F5F7F4] min-h-screen text-[#2D3748] font-moderustic">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Hero Section */}
-        <div className="min-h-[80vh] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+        <div className="min-h-[80vh] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 pt-16 md:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -270,7 +274,7 @@ const CourseSelection = () => {
               Get personalized course recommendations based on your interests,
               skills, and career goals.
             </p>
-            <button 
+            <button
               onClick={handleGetStarted}
               className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
@@ -279,7 +283,7 @@ const CourseSelection = () => {
           </div>
         </motion.div>
       </div>
-      <WhatsAppButton 
+      <WhatsAppButton
         phoneNumber={WHATSAPP_NUMBER}
         message="Hi, I need help with Course Selection. Can you guide me through the options available?"
       />

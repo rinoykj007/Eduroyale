@@ -44,18 +44,20 @@ const About = () => {
       className="bg-gradient-to-b from-[#0A1128] via-[#001F54] to-[#034078] min-h-screen text-white font-moderustic relative overflow-hidden"
     >
       {/* WhatsApp Button */}
-      <FloatingWhatsApp 
-        phoneNumber="+919876543210"
-        accountName="EDUROYALE Support"
-        allowEsc
-        allowClickAway
-        notification
-        notificationSound
-        statusMessage="Typically replies within 1 hour"
-        chatMessage="Hello! 👋 How can we help you today?"
-        placeholder="Type a message.."
-        avatar="/logo.png"
-      />
+      <div className="floating-whatsapp z-[999]">
+        <FloatingWhatsApp 
+          phoneNumber="+919876543210"
+          accountName="EDUROYALE Support"
+          allowEsc
+          allowClickAway
+          notification
+          notificationSound
+          statusMessage="Typically replies within 1 hour"
+          chatMessage="Hello! 👋 How can we help you today?"
+          placeholder="Type a message.."
+          avatar="/logo.png"
+        />
+      </div>
       
       {/* Parallax Background Elements */}
       <motion.div
@@ -800,110 +802,6 @@ const About = () => {
           </motion.div>
         </motion.div>
       </main>
-
-      <style jsx global>{`
-        @import url("https://fonts.googleapis.com/css2?family=Moderustic&family=SUSE:wght@600&display=swap");
-
-        /* WhatsApp Button Custom Styles */
-        .floating-whatsapp {
-          z-index: 999 !important;
-        }
-        
-        .floating-whatsapp .floating-whatsapp-button {
-          background-color: #25D366 !important;
-          transform: scale(0.9);
-          transition: transform 0.3s ease;
-        }
-        
-        .floating-whatsapp .floating-whatsapp-button:hover {
-          transform: scale(1);
-          background-color: #22c55e !important;
-        }
-        
-        .floating-whatsapp-popup {
-          border-radius: 15px !important;
-          border: 1px solid rgba(255, 255, 255, 0.1) !important;
-          background: rgba(255, 255, 255, 0.1) !important;
-          backdrop-filter: blur(10px) !important;
-        }
-        
-        .floating-whatsapp-popup .floating-whatsapp-message {
-          background: rgba(255, 255, 255, 0.05) !important;
-          color: #CAF0F8 !important;
-        }
-        
-        .floating-whatsapp-popup .floating-whatsapp-input {
-          border: 1px solid rgba(255, 255, 255, 0.1) !important;
-          background: rgba(255, 255, 255, 0.05) !important;
-          color: #CAF0F8 !important;
-        }
-
-        .floating-whatsapp-popup .floating-whatsapp-send {
-          background-color: #25D366 !important;
-          color: white !important;
-        }
-
-        .floating-whatsapp-popup .floating-whatsapp-send:hover {
-          background-color: #22c55e !important;
-        }
-
-        @keyframes gradient {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-
-        @keyframes float {
-          0% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-          100% {
-            transform: translateY(0px);
-          }
-        }
-
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-
-        .animate-gradient {
-          background-size: 200% auto;
-          animation: gradient 4s linear infinite;
-        }
-
-        .animate-gradient-reverse {
-          background-size: 200% auto;
-          animation: gradient 4s linear infinite reverse;
-        }
-
-        .poster {
-          position: relative;
-          display: inline-flex;
-        }
-        .poster:after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background: url("https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1974&auto=format&fit=crop");
-          background-size: cover;
-          transition: 1s ease;
-          opacity: 0.8;
-          cursor: pointer;
-        }
-        .poster-active:after {
-          opacity: 0;
-          pointer-events: none;
-        }
-      `}</style>
     </div>
   );
 };
@@ -1032,3 +930,107 @@ const features = [
 ];
 
 export default About;
+
+<style jsx global>{`
+  @import url("https://fonts.googleapis.com/css2?family=Moderustic&family=SUSE:wght@600&display=swap");
+
+  /* WhatsApp Button Custom Styles */
+  .floating-whatsapp {
+    z-index: 999 !important;
+  }
+  
+  .floating-whatsapp .floating-whatsapp-button {
+    background-color: #25D366 !important;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+  
+  .floating-whatsapp .floating-whatsapp-button:hover {
+    transform: scale(1);
+    background-color: #22c55e !important;
+  }
+  
+  .floating-whatsapp-popup {
+    border-radius: 15px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+  
+  .floating-whatsapp-popup .floating-whatsapp-message {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #CAF0F8 !important;
+  }
+  
+  .floating-whatsapp-popup .floating-whatsapp-input {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #CAF0F8 !important;
+  }
+
+  .floating-whatsapp-popup .floating-whatsapp-send {
+    background-color: #25D366 !important;
+    color: white !important;
+  }
+
+  .floating-whatsapp-popup .floating-whatsapp-send:hover {
+    background-color: #22c55e !important;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-gradient {
+    background-size: 200% auto;
+    animation: gradient 4s linear infinite;
+  }
+
+  .animate-gradient-reverse {
+    background-size: 200% auto;
+    animation: gradient 4s linear infinite reverse;
+  }
+
+  .poster {
+    position: relative;
+    display: inline-flex;
+  }
+  .poster:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1974&auto=format&fit=crop");
+    background-size: cover;
+    transition: 1s ease;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .poster-active:after {
+    opacity: 0;
+    pointer-events: none;
+  }
+`}</style>

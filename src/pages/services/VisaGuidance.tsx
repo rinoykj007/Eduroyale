@@ -8,7 +8,7 @@ import visaAnimation from "../../assets/animations/Visa.json";
 const VisaGuidance = () => {
   return (
     <div className="bg-gradient-to-b from-[#F8F9FA] via-[#E9ECEF] to-[#DEE2E6] min-h-screen text-gray-800 font-['Outfit']">
-      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 py-8 sm:py-16 mt-16 sm:mt-0 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,8 +22,8 @@ const VisaGuidance = () => {
                 Visa Application Guidance
               </h1>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-8 leading-relaxed font-['Outfit']">
-                Expert assistance for successful student visa applications with our
-                high success rate approach.
+                Expert assistance for successful student visa applications with
+                our high success rate approach.
               </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -110,7 +110,9 @@ const VisaGuidance = () => {
               <h3 className="text-xl font-semibold mb-2 text-gray-600 font-['Outfit']">
                 {service.title}
               </h3>
-              <p className="text-gray-700 font-['Outfit']">{service.description}</p>
+              <p className="text-gray-700 font-['Outfit']">
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -163,7 +165,9 @@ const VisaGuidance = () => {
                   <h3 className="text-xl font-semibold mb-2 text-gray-600 font-['Outfit']">
                     {process.title}
                   </h3>
-                  <p className="text-gray-700 font-['Outfit']">{process.description}</p>
+                  <p className="text-gray-700 font-['Outfit']">
+                    {process.description}
+                  </p>
                 </div>
                 {index < 3 && (
                   <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">

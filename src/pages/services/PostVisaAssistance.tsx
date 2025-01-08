@@ -14,7 +14,7 @@ import { BsBank2 } from "react-icons/bs";
 
 const PostVisaAssistance = () => {
   return (
-    <div className="bg-gradient-to-b from-[#F8FAFC] via-[#EFF6FF] to-[#F0F9FF] min-h-screen text-gray-800 font-moderustic pt-20">
+    <div className="bg-gradient-to-b from-[#F8FAFC] via-[#EFF6FF] to-[#F0F9FF] min-h-screen text-gray-800 font-moderustic pt-14 sm:pt-20">
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div

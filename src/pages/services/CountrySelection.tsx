@@ -20,11 +20,11 @@ const getCardStyle = (index: number) => {
 const CountrySelection = () => {
   return (
     <>
-      <div className="bg-gradient-to-b from-white via-[#F7FAFC] to-[#F5F7F4] min-h-screen text-[#2D3748] font-moderustic pt-12">
+      <div className="bg-gradient-to-b from-white via-[#F7FAFC] to-[#F5F7F4] min-h-screen text-[#2D3748] font-moderustic">
         {/* Hero Section with Animation */}
-        <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8 py-16">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="w-full lg:w-1/2 space-y-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 mt-14 sm:mt-0">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+            <div className="w-full lg:w-1/2 space-y-6 lg:space-y-8">
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -33,11 +33,11 @@ const CountrySelection = () => {
               >
                 Expert Country Guidance
               </motion.span>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C3E50] leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C3E50] leading-tight">
                 Country Selection
                 <span className="block text-blue-600 mt-3">Guidance</span>
               </h1>
-              <p className="text-lg xl:text-xl text-[#34495E] max-w-2xl">
+              <p className="text-base sm:text-lg xl:text-xl text-[#34495E] max-w-2xl">
                 Choose the perfect destination for your international education
                 with our expert country selection guidance.
               </p>
@@ -59,7 +59,7 @@ const CountrySelection = () => {
               </div>
             </div>
             <div className="w-full lg:w-1/2 flex items-center justify-center">
-              <div className="w-full h-[450px] relative">
+              <div className="w-full h-[300px] sm:h-[400px] lg:h-[450px] relative">
                 <Lottie
                   animationData={animationData}
                   loop={true}
@@ -72,8 +72,8 @@ const CountrySelection = () => {
         </div>
 
         {/* Popular Countries Grid */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
                 country: "United States",
@@ -189,11 +189,11 @@ const CountrySelection = () => {
         </div>
 
         {/* Comparison Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-[#2C3E50]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#2C3E50]">
             Country Comparison Factors
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {[
               {
                 title: "Education Cost",
@@ -250,11 +250,11 @@ const CountrySelection = () => {
         </div>
 
         {/* Study Requirements Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-[#2C3E50]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#2C3E50]">
             Study Requirements
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {[
               {
                 title: "Academic Requirements",
@@ -324,11 +324,11 @@ const CountrySelection = () => {
         </div>
 
         {/* Timeline Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-[#2C3E50]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#2C3E50]">
             Selection Process Timeline
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {[
               {
                 step: "1",
@@ -398,17 +398,17 @@ const CountrySelection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center space-y-8">
-            <div className="space-y-3">
-              <h2 className="text-4xl sm:text-5xl font-bold text-[#1e3a8a] leading-tight">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+          <div className="text-center space-y-6 sm:space-y-8">
+            <div className="space-y-2 sm:space-y-3">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1e3a8a] leading-tight">
                 Ready to Choose Your
                 <span className="text-[#3b82f6] block mt-3">
                   Study Destination?
                 </span>
               </h2>
             </div>
-            <p className="text-[#334155] max-w-2xl mx-auto text-lg sm:text-xl leading-relaxed font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-[#334155] max-w-2xl mx-auto leading-relaxed font-medium">
               Get personalized country recommendations based on your preferences
               and requirements.
             </p>

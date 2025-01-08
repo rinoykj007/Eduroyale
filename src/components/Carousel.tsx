@@ -133,7 +133,7 @@ export default function Carousel() {
 
               {/* Content */}
               <div
-                className="absolute top-[15%] sm:top-[15%] md:top-[20%] left-4 md:left-16 z-20 text-white transition-all duration-[1500ms] px-4 sm:px-0"
+                className="absolute top-[15vh] left-[clamp(1rem,5vw,4rem)] z-20 text-white transition-all duration-[1500ms] max-w-[clamp(300px,50vw,600px)]"
                 style={{
                   transform: `translateY(${index === 0 ? "0" : "30px"})`,
                   opacity: index === 0 ? 1 : 0,
@@ -141,29 +141,29 @@ export default function Carousel() {
                   transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
                 }}
               >
-                <div className="mb-2 sm:mb-4">
-                  <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-1 sm:mb-2">
+                <div className="mb-[clamp(0.5rem,2vh,2rem)]">
+                  <h2 className="text-white text-[clamp(1rem,2.5vw,2.5rem)] font-semibold mb-[clamp(0.25rem,1vh,1rem)]">
                     {item.place}
                   </h2>
                 </div>
-                <div className="space-y-0.5 sm:space-y-1 md:space-y-2">
-                  <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold">
+                <div className="space-y-[clamp(0.25rem,1vh,1rem)]">
+                  <h1 className="text-white text-[clamp(2rem,5vw,5rem)] font-bold">
                     {item.title}
                   </h1>
-                  <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-2 sm:mb-4">
+                  <h1 className="text-white text-[clamp(2rem,5vw,5rem)] font-bold mb-[clamp(0.5rem,2vh,2rem)]">
                     {item.title2}
                   </h1>
                 </div>
-                <div className="mt-2 sm:mt-4 md:mt-8 w-full md:w-[600px] text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-[90vw] text-[#FFFFFF] font-['Manrope'] tracking-wide font-medium">
+                <div className="mt-[clamp(1rem,3vh,3rem)] w-full text-[clamp(0.875rem,1.25vw,1.25rem)] leading-relaxed text-[#FFFFFF] font-['Manrope'] tracking-wide font-medium">
                   {item.description}
                 </div>
-                <div className="mt-4 sm:mt-6 md:mt-10 flex items-center gap-4 sm:gap-6">
-                  <button className="w-12 h-12 rounded-full bg-white/10 border-2 border-white/30 grid place-items-center hover:bg-white/20 transition-all duration-300">
+                <div className="mt-[clamp(1rem,4vh,4rem)] flex items-center gap-[clamp(1rem,2vw,2rem)]">
+                  <button className="w-[clamp(2.5rem,6vw,3rem)] h-[clamp(2.5rem,6vw,3rem)] rounded-full bg-white/10 border-2 border-white/30 grid place-items-center hover:bg-white/20 transition-all duration-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      className="h-6 w-6"
+                      className="w-[clamp(1.25rem,3vw,1.5rem)] h-[clamp(1.25rem,3vw,1.5rem)]"
                     >
                       <path
                         fillRule="evenodd"
@@ -184,20 +184,19 @@ export default function Carousel() {
       </div>
 
       {/* Thumbnails */}
-      <div className="absolute right-4 sm:right-8 md:right-12 bottom-10 sm:bottom-20 z-30">
-        <div className="relative flex items-center justify-end gap-2 sm:gap-3 md:gap-4">
+      <div className="absolute right-[clamp(1rem,4vw,4rem)] bottom-[max(2rem,min(15vh,8rem))] z-30">
+        <div className="relative flex items-center justify-end gap-[clamp(0.5rem,1vw,1rem)]">
           {items.slice(1, 4).map((item, index) => (
             <div
               key={item.id}
               className={`
-                relative cursor-pointer overflow-hidden rounded-[20px]
+                relative cursor-pointer overflow-hidden rounded-[clamp(0.75rem,1.5vw,1.25rem)]
                 shadow-[0_20px_30px_rgba(255,255,255,0.3)_inset]
                 transition-all duration-[1200ms] ease-[cubic-bezier(0.34,1.56,0.64,1)]
                 hover:scale-[1.08] hover:-translate-y-2
                 group shrink-0
-                md:w-[160px] md:h-[240px]
-                sm:w-[120px] sm:h-[180px]
-                w-[90px] h-[135px]
+                w-[clamp(80px,15vw,160px)] h-[clamp(120px,22.5vw,240px)]
+                max-h-[30vh]
               `}
               onClick={() => rotateItems("next")}
             >
@@ -211,7 +210,7 @@ export default function Carousel() {
                          group-hover:bg-black/20"
               />
               <div
-                className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-6 text-white transition-transform duration-[1200ms] ease-[cubic-bezier(0.34,1.56,0.64,1)]
+                className="absolute bottom-0 left-0 right-0 p-[clamp(0.75rem,2vw,1.5rem)] text-white transition-transform duration-[1200ms] ease-[cubic-bezier(0.34,1.56,0.64,1)]
                          group-hover:translate-y-1"
                 style={{
                   background:
@@ -219,13 +218,13 @@ export default function Carousel() {
                 }}
               >
                 <div
-                  className="text-[10px] sm:text-xs md:text-sm font-medium mb-0.5 sm:mb-1 opacity-90 transition-all duration-[1200ms] font-['Manrope'] tracking-wider uppercase
+                  className="text-[clamp(0.625rem,1.25vw,0.875rem)] font-medium mb-[clamp(0.125rem,0.5vw,0.25rem)] opacity-90 transition-all duration-[1200ms] font-['Manrope'] tracking-wider uppercase
                             group-hover:opacity-100"
                 >
                   {item.place}
                 </div>
                 <div
-                  className="text-xs sm:text-sm md:text-base font-bold leading-tight transition-all duration-[1200ms] font-['Space_Grotesk'] tracking-tight
+                  className="text-[clamp(0.75rem,1.5vw,1rem)] font-bold leading-tight transition-all duration-[1200ms] font-['Space_Grotesk'] tracking-tight
                             group-hover:opacity-100"
                 >
                   {item.title} {item.title2}
@@ -237,10 +236,10 @@ export default function Carousel() {
       </div>
 
       {/* Navigation */}
-      <div className="nav absolute bottom-4 sm:bottom-8 left-4 sm:left-auto sm:right-16 z-50 select-none flex gap-2 sm:gap-3">
+      <div className="nav absolute bottom-[max(1rem,min(8vh,3rem))] left-[clamp(1rem,4vw,4rem)] sm:left-auto sm:right-[clamp(4rem,8vw,8rem)] z-50 select-none flex gap-[clamp(0.5rem,1vw,1rem)]">
         <button
           className="btn bg-white/50 text-black/70 border-2 border-black/60 
-                   px-2 sm:px-3 py-1 sm:py-2 rounded-full cursor-pointer text-sm sm:text-base
+                   px-[clamp(0.5rem,1.5vw,1rem)] py-[clamp(0.25rem,1vh,0.5rem)] rounded-full cursor-pointer text-[clamp(0.875rem,1.25vw,1rem)]
                    hover:bg-white/30"
           onClick={() => rotateItems("prev")}
         >
@@ -248,7 +247,7 @@ export default function Carousel() {
         </button>
         <button
           className="btn bg-white/50 text-black/70 border-2 border-black/60 
-                   px-2 sm:px-3 py-1 sm:py-2 rounded-full cursor-pointer text-sm sm:text-base
+                   px-[clamp(0.5rem,1.5vw,1rem)] py-[clamp(0.25rem,1vh,0.5rem)] rounded-full cursor-pointer text-[clamp(0.875rem,1.25vw,1rem)]
                    hover:bg-white/30"
           onClick={() => rotateItems("next")}
         >
