@@ -1,18 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Blog from "./pages/Blog";
-import BlogAdmin from "./pages/admin/BlogAdmin";
-import Footer from "./components/Footer";
-import Courses from "./pages/courses";
-import Expert_Counseling from "./pages/Services/Expert_Counseling";
-import CourseSelection from "./pages/Services/CourseSelection";
-import BankLoan from "./pages/Services/Bank_Loan";
-import CountrySelection from "./pages/Services/CountrySelection";
-import TravelAssistance from "./pages/Services/TravelAssistance";
-import VisaGuidance from "./pages/Services/VisaGuidance";
-import PostVisaAssistance from "./pages/Services/PostVisaAssistance";
+import Navbar from "./components/Navbar.jsx";
+import Home from "./components/Home.jsx";
+import Blog from "./pages/Blog.jsx";
+import BlogAdmin from "./pages/admin/BlogAdmin.jsx";
+import Footer from "./components/Footer.jsx";
+import Courses from "./pages/Courses.jsx";
+import Expert_Counseling from "./pages/Services/Expert_Counseling.jsx";
+import CourseSelection from "./pages/Services/CourseSelection.jsx";
+import BankLoan from "./pages/Services/Bank_Loan.jsx";
+import CountrySelection from "./pages/Services/CountrySelection.jsx";
+import TravelAssistance from "./pages/Services/TravelAssistance.jsx";
+import VisaGuidance from "./pages/Services/VisaGuidance.jsx";
+import PostVisaAssistance from "./pages/Services/PostVisaAssistance.jsx";
 import Contact from "./pages/Contact";
 
 function App() {

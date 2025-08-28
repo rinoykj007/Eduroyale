@@ -9,13 +9,7 @@ import {
   FaHome,
 } from "react-icons/fa";
 
-interface ServiceType {
-  icon: React.ElementType;
-  title: string;
-  description: string;
-}
-
-const services: ServiceType[] = [
+const services = [
   {
     icon: FaGraduationCap,
     title: "Education Counseling",
@@ -64,7 +58,8 @@ const AnimatedBackground = () => (
       <motion.path
         d="M-100,20 C50,100 150,0 300,50 S450,100 600,50 S750,0 900,50 S1050,100 1200,50"
         fill="none"
-        stroke="rgba(44, 62, 80, 0.15)" // Dark slate with higher opacity
+        // Dark slate with higher opacity
+        stroke="rgba(44, 62, 80, 0.15)"
         strokeWidth="4"
         initial={{ pathLength: 0, opacity: 0 }}
         animate={{ pathLength: 1, opacity: 1, x: [-300, 0] }}
@@ -78,7 +73,8 @@ const AnimatedBackground = () => (
       <motion.path
         d="M-100,80 C50,0 150,100 300,50 S450,0 600,50 S750,100 900,50 S1050,0 1200,50"
         fill="none"
-        stroke="rgba(52, 152, 219, 0.2)" // Bright blue with higher opacity
+        // Bright blue with higher opacity
+        stroke="rgba(52, 152, 219, 0.2)"
         strokeWidth="4"
         initial={{ pathLength: 0, opacity: 0 }}
         animate={{ pathLength: 1, opacity: 1, x: [0, -300] }}
@@ -92,7 +88,8 @@ const AnimatedBackground = () => (
       <motion.path
         d="M-100,50 Q50,100 200,50 T500,50 T800,50 T1100,50"
         fill="none"
-        stroke="rgba(41, 128, 185, 0.25)" // Another blue shade with higher opacity
+        // Another blue shade with higher opacity
+        stroke="rgba(41, 128, 185, 0.25)"
         strokeWidth="4"
         initial={{ pathLength: 0, opacity: 0 }}
         animate={{ pathLength: 1, opacity: 1, y: [-50, 50] }}
@@ -107,7 +104,7 @@ const AnimatedBackground = () => (
   </svg>
 );
 
-const getCardStyle = (index: number) => {
+const getCardStyle = (index) => {
   const colors = [
     "rgb(255, 227, 227)", // Soft Pink
     "rgb(201, 233, 210)", // Sage Green
@@ -119,13 +116,7 @@ const getCardStyle = (index: number) => {
   return colors[index];
 };
 
-const ServiceCard = ({
-  service,
-  index,
-}: {
-  service: ServiceType;
-  index: number;
-}) => {
+const ServiceCard = ({ service, index }) => {
   const controls = useAnimation();
   const ref = React.useRef(null);
   const isInView = useInView(ref, {
@@ -188,7 +179,7 @@ const ServiceCard = ({
   );
 };
 
-const Services: React.FC = () => {
+const Services = () => {
   return (
     <section className="relative py-16 overflow-hidden px-4">
       <AnimatedBackground />

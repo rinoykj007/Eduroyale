@@ -5,8 +5,8 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesDropdown, setServicesDropdown] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef(null);
+  const mobileMenuRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -17,12 +17,12 @@ const Navbar = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event) => {
       if (
         dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node) &&
+        !dropdownRef.current.contains(event.target) &&
         mobileMenuRef.current &&
-        !mobileMenuRef.current.contains(event.target as Node)
+        !mobileMenuRef.current.contains(event.target)
       ) {
         setServicesDropdown(false);
       }
@@ -34,18 +34,18 @@ const Navbar = () => {
     };
   }, []);
 
-  const toggleMenu = (e: React.MouseEvent) => {
+  const toggleMenu = (e) => {
     e.stopPropagation();
     setIsOpen(!isOpen);
     if (servicesDropdown) setServicesDropdown(false);
   };
 
-  const toggleServicesDropdown = (e: React.MouseEvent) => {
+  const toggleServicesDropdown = (e) => {
     e.stopPropagation();
     setServicesDropdown(!servicesDropdown);
   };
 
-  const handleServiceClick = (path: string, e: React.MouseEvent) => {
+  const handleServiceClick = (path, e) => {
     e.stopPropagation();
     navigate(path);
     setServicesDropdown(false);

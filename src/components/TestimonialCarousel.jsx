@@ -4,20 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-interface Testimonial {
-  text: string;
-  name: string;
-  university: string;
-  image: string;
-}
-
-interface TestimonialCarouselProps {
-  testimonials: Testimonial[];
-}
-
-const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
-  testimonials,
-}) => {
+const TestimonialCarousel = ({ testimonials }) => {
   const settings = {
     dots: true,
     infinite: true,
