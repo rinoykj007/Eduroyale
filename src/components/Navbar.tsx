@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import logo from "../assets/Image/e_logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +64,7 @@ const Navbar = () => {
                 to="/"
                 className="text-2xl font-bold font-['Outfit'] tracking-tight"
               >
-                Edu<span className="text-blue-600">Royale</span>
+                <img src={logo} alt="EduRoyale Logo" className="w-18 h-12" />
               </Link>
             </div>
 
@@ -260,7 +261,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div 
+        <div
           ref={mobileMenuRef}
           className="md:hidden fixed inset-x-0 top-20 mx-2 z-[100] font-['Plus_Jakarta_Sans']"
           onClick={(e) => e.stopPropagation()}
@@ -306,14 +307,32 @@ const Navbar = () => {
               {servicesDropdown && (
                 <div className="pl-4 space-y-1">
                   {[
-                    { path: '/services/expert-counseling', label: 'Expert Counseling' },
-                    { path: '/services/course-selection', label: 'Course Selection' },
-                    { path: '/services/country-selection', label: 'Country Selection' },
-                    { path: '/services/bank-loan', label: 'Bank Loan' },
-                    { path: '/services/visa-guidance', label: 'Visa Guidance' },
-                    { path: '/services/post-visa-assistance', label: 'Post-Visa Assistance' },
-                    { path: '/services/travel-assistance', label: 'Travel Assistance' },
-                    { path: '/services/free-ielts-training', label: 'Free IELTS Training' },
+                    {
+                      path: "/services/expert-counseling",
+                      label: "Expert Counseling",
+                    },
+                    {
+                      path: "/services/course-selection",
+                      label: "Course Selection",
+                    },
+                    {
+                      path: "/services/country-selection",
+                      label: "Country Selection",
+                    },
+                    { path: "/services/bank-loan", label: "Bank Loan" },
+                    { path: "/services/visa-guidance", label: "Visa Guidance" },
+                    {
+                      path: "/services/post-visa-assistance",
+                      label: "Post-Visa Assistance",
+                    },
+                    {
+                      path: "/services/travel-assistance",
+                      label: "Travel Assistance",
+                    },
+                    {
+                      path: "/services/free-ielts-training",
+                      label: "Free IELTS Training",
+                    },
                   ].map((service) => (
                     <button
                       key={service.path}

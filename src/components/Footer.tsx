@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -36,8 +37,8 @@ const Footer = () => {
                   event. The institutions which we support in USA, UK, Canada,
                   New Zealand, Ireland, Australia, Sweden, and Portugal excels
                   in its quality of education...{" "}
-                  <a
-                    href="/about"
+                  <Link
+                    to="/about"
                     className="text-blue-400 hover:text-blue-300 inline-flex items-center group transition-all duration-300 text-xs"
                   >
                     view more
@@ -54,7 +55,7 @@ const Footer = () => {
                         d="M13 7l5 5m0 0l-5 5m5-5H6"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
@@ -68,8 +69,8 @@ const Footer = () => {
                 </h4>
                 <ul className="space-y-1.5 text-xs font-poppins">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/"
                       className="text-gray-300 hover:text-blue-300 transition-all duration-300 flex items-center group"
                     >
                       <span className="text-blue-400/80 mr-2 transform group-hover:translate-x-1 transition-transform duration-300">
@@ -78,11 +79,11 @@ const Footer = () => {
                       <span className="group-hover:translate-x-1 transition-transform duration-300">
                         Home
                       </span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/about"
                       className="text-gray-300 hover:text-blue-300 transition-all duration-300 flex items-center group"
                     >
                       <span className="text-blue-400/80 mr-2 transform group-hover:translate-x-1 transition-transform duration-300">
@@ -91,11 +92,11 @@ const Footer = () => {
                       <span className="group-hover:translate-x-1 transition-transform duration-300">
                         About Us
                       </span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/courses"
                       className="text-gray-300 hover:text-blue-300 transition-all duration-300 flex items-center group"
                     >
                       <span className="text-blue-400/80 mr-2 transform group-hover:translate-x-1 transition-transform duration-300">
@@ -104,11 +105,11 @@ const Footer = () => {
                       <span className="group-hover:translate-x-1 transition-transform duration-300">
                         Courses
                       </span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/contact"
                       className="text-gray-300 hover:text-blue-300 transition-all duration-300 flex items-center group"
                     >
                       <span className="text-blue-400/80 mr-2 transform group-hover:translate-x-1 transition-transform duration-300">
@@ -117,7 +118,7 @@ const Footer = () => {
                       <span className="group-hover:translate-x-1 transition-transform duration-300">
                         Contact Us
                       </span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -129,37 +130,37 @@ const Footer = () => {
                 </h4>
                 <ul className="space-y-1.5 text-xs font-poppins">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/courses?country=ireland"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> Ireland
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/courses?country=uk"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> UK
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/courses?country=canada"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> Canada
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/courses?country=newzealand"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> New
                       Zealand
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -171,39 +172,39 @@ const Footer = () => {
                 </h4>
                 <ul className="space-y-1.5 text-xs font-poppins">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/services/expert-counseling"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> Expert
                       Counseling
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/services/course-selection"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> Course
                       Selection
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/services/country-selection"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> Country
                       Selection
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/services/bank-loan"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> Bank Loan
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -215,46 +216,46 @@ const Footer = () => {
                 </h4>
                 <ul className="space-y-1.5 text-xs font-poppins">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/blog?tag=academics"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> Academics
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/blog?tag=support"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> Student
                       Support
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/blog?tag=abroad"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> Go Abroad
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/faq"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> FAQ
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/testimonials"
                       className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
                     >
                       <span className="text-blue-400/80 mr-2">›</span> Student
                       Reviews
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -434,7 +435,9 @@ const Footer = () => {
             <div className="flex justify-start space-x-2 flex-wrap gap-y-2">
               {/* Facebook */}
               <a
-                href="#"
+                href="https://facebook.com/eduroyale"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative p-2 rounded-full bg-gradient-to-r from-slate-900 to-blue-950 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 border border-blue-900/30 shadow-lg"
                 aria-label="Facebook"
               >
@@ -443,7 +446,9 @@ const Footer = () => {
               </a>
               {/* X (Twitter) */}
               <a
-                href="#"
+                href="https://twitter.com/eduroyale"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative p-2 rounded-full bg-gradient-to-r from-slate-900 to-blue-950 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 border border-blue-900/30 shadow-lg"
                 aria-label="X (Twitter)"
               >
