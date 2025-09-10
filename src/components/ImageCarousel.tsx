@@ -110,7 +110,8 @@ const ImageCarousel = () => {
     {
       id: 9,
       name: "Technological University Dublin",
-      logo_url: "https://www.tudublin.ie/media/images/tu-dublin-logo.png",
+      logo_url:
+        "https://www.drive0.eu/wp-content/uploads/2019/09/Dublin-Institute-of-Technology-DIT-IE.jpg",
     },
     {
       id: 10,
@@ -176,6 +177,60 @@ const ImageCarousel = () => {
       logo_url:
         "https://tus.ie/app/themes/app-theme/assets//main/img/layout/logo.svg",
     },
+    {
+      id: 21,
+      name: "Paris-Saclay University",
+      logo_url:
+        "https://upload.wikimedia.org/wikipedia/commons/c/c4/Logo_Universit%C3%A9_Paris-Saclay_2019-12.svg",
+    },
+    {
+      id: 22,
+      name: "Sorbonne University",
+      logo_url:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Logo_of_Sorbonne_University.svg/1200px-Logo_of_Sorbonne_University.svg.png",
+    },
+    {
+      id: 23,
+      name: "Télécom SudParis",
+      logo_url:
+        "https://www.telecom-sudparis.eu/en/wp-content/uploads/sites/3/2024/06/TSP-IPP.svg",
+    },
+    {
+      id: 24,
+      name: "École Polytechnique",
+      logo_url:
+        "https://upload.wikimedia.org/wikipedia/commons/0/06/%C3%89cole_polytechnique_signature.svg",
+    },
+    {
+      id: 25,
+      name: "ENSTA Paris",
+      logo_url:
+        "https://upload.wikimedia.org/wikipedia/commons/4/45/Logo_ENSTA_Paris.jpg",
+    },
+    {
+      id: 26,
+      name: "Institut Polytechnique de Paris",
+      logo_url:
+        "https://upload.wikimedia.org/wikipedia/commons/d/d2/Institut_polytechnique_de_Paris_logo.svg",
+    },
+    {
+      id: 27,
+      name: "Université Paris Cité",
+      logo_url:
+        "https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-Cit%C3%A9_%28partenariat_Wikim%C3%A9dia%29.svg",
+    },
+    {
+      id: 28,
+      name: "Sciences Po Lille",
+      logo_url:
+        "https://upload.wikimedia.org/wikipedia/commons/a/ae/Logo_de_Sciences_Po_Lille.png",
+    },
+    {
+      id: 29,
+      name: "Université Grenoble Alpes",
+      logo_url:
+        "https://upload.wikimedia.org/wikipedia/commons/0/07/Logo_Universit%C3%A9_Grenoble_Alpes_2020.svg",
+    },
   ];
 
   return (
@@ -192,7 +247,7 @@ const ImageCarousel = () => {
               <img
                 src={university.logo_url}
                 alt={`${university.name} logo`}
-                className="w-[120px] h-[120px] object-contain rounded-lg bg-white p-3 shadow-sm border border-gray-100"
+                className="w-[170px] h-[120px] object-contain rounded-lg bg-white p-3 shadow-sm border border-gray-100"
               />
             </div>
           </div>
