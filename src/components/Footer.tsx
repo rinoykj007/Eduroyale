@@ -373,11 +373,10 @@ const Footer = () => {
                 TRIVANDRUM
               </h4>
               <div className="text-lg font-bold mb-2 hover:text-blue-300 transition-colors duration-300 font-poppins">
-                (+91) 9746 677 711
+                (+91) 9995 058 202
               </div>
               <ul className="space-y-2 text-xs font-poppins">
-                <li className="text-gray-300">Tel: (+91) 470 2620009</li>
-                <li className="text-gray-300">Fax: (+91) 470 2620009</li>
+                <li className="text-gray-300">Tel: (+91) 9746 677 711</li>
                 <li className="text-gray-300 mt-2">
                   <div className="flex items-center mb-2">
                     <svg

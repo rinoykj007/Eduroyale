@@ -11,20 +11,20 @@ import Carousel6 from "../assets/Image/carousel-6.jpg";
 
 const data = [
   {
-    place: "United Kingdom",
+    place: "Ireland",
     title: "DISCOVER",
-    title2: "OXFORD",
+    title2: "DUBLIN",
     description:
-      "Experience centuries of academic excellence in Oxford, where historic colleges meet cutting-edge innovation. Home to world-renowned research facilities and a vibrant international community that shapes global leaders.",
+      "Uncover the academic and cultural heartbeat of Ireland in Dublin, home to historic institutions like Trinity College. A dynamic city where tradition meets modern innovation, inspiring students from around the globe.",
     image: Carousel1,
     id: 1,
   },
   {
-    place: "United States",
+    place: "France",
     title: "EXPLORE",
-    title2: "BOSTON",
+    title2: "PARIS",
     description:
-      "Boston, America's premier education hub, offers unparalleled opportunities at prestigious institutions. Experience a rich blend of historical heritage and innovative research in a city that breathes academic excellence.",
+      "Study in the City of Light, where world-class universities like the Sorbonne meet a rich tapestry of history, art, and intellectual life. Paris offers an unparalleled educational and cultural experience.",
     image: Carousel2,
     id: 2,
   },
