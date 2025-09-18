@@ -119,7 +119,9 @@ const PostVisaAssistance = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`${service.bgColor} rounded-xl p-6 ${service.hoverBg} transition-all duration-300 shadow-md`}
             >
-              <div className={`mb-4 p-3 ${service.iconBg} rounded-lg inline-block shadow-sm`}>
+              <div
+                className={`mb-4 p-3 ${service.iconBg} rounded-lg inline-block shadow-sm`}
+              >
                 {service.icon}
               </div>
               <h3 className={`text-xl font-semibold mb-2 ${service.textColor}`}>
@@ -347,7 +349,7 @@ const PostVisaAssistance = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <WhatsAppButton
           phoneNumber={WHATSAPP_NUMBER}
-          message="Hi, I need information about post-visa assistance services!"
+          message="🎓 Hi, I need information about post-visa assistance services!"
         />
       </div>
     </div>

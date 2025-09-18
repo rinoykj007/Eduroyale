@@ -7,9 +7,13 @@ import { WHATSAPP_NUMBER } from "../../config/contact";
 
 const ExpertCounseling = () => {
   const handleBookConsultation = () => {
-    const message = "Hi, I'm interested in booking a free consultation for Expert Counseling services.";
+    const message =
+      "Hi, I'm interested in booking a free consultation for Expert Counseling services.";
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`,
+      "_blank"
+    );
   };
 
   return (
@@ -149,7 +153,9 @@ const ExpertCounseling = () => {
               whileHover={{ y: -5 }}
               className={`bg-gradient-to-br ${feature.gradient} rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100/20 backdrop-blur-sm`}
             >
-              <div className={`text-4xl mb-6 p-4 bg-gradient-to-br ${feature.iconBg} rounded-xl inline-block shadow-sm text-white`}>
+              <div
+                className={`text-4xl mb-6 p-4 bg-gradient-to-br ${feature.iconBg} rounded-xl inline-block shadow-sm text-white`}
+              >
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold mb-4 text-gray-800">
@@ -214,8 +220,12 @@ const ExpertCounseling = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative"
               >
-                <div className={`bg-gradient-to-br ${process.gradient} rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100/20 backdrop-blur-sm h-full group hover:scale-[1.02]`}>
-                  <div className={`flex items-center justify-center w-12 h-12 bg-gradient-to-br ${process.numberBg} rounded-full text-white font-bold mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                <div
+                  className={`bg-gradient-to-br ${process.gradient} rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100/20 backdrop-blur-sm h-full group hover:scale-[1.02]`}
+                >
+                  <div
+                    className={`flex items-center justify-center w-12 h-12 bg-gradient-to-br ${process.numberBg} rounded-full text-white font-bold mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                  >
                     {process.step}
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-gray-800">
@@ -286,9 +296,9 @@ const ExpertCounseling = () => {
             </div>
           </div>
         </motion.div>
-        <WhatsAppButton 
+        <WhatsAppButton
           phoneNumber={WHATSAPP_NUMBER}
-          message="Hi, I'm interested in Expert Counseling services. Can you help me?"
+          message="🎯 Hi, I'm interested in Expert Counseling services. Can you help me?"
         />
       </div>
     </div>

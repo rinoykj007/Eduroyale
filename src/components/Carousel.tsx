@@ -8,6 +8,7 @@ import Carousel3 from "../assets/Image/carousel-3.jpeg";
 import Carousel4 from "../assets/Image/carousel-4.jpg";
 import Carousel5 from "../assets/Image/carousel-5.jpg";
 import Carousel6 from "../assets/Image/carousel-6.jpg";
+import { FaExclamationTriangle } from "react-icons/fa";
 
 const data = [
   {
@@ -173,8 +174,8 @@ export default function Carousel() {
                     </svg>
                   </button>
                   <WhatsApp
-                    phoneNumber="+1234567890"
-                    message="Hello, I'd like to learn more about this location!"
+                    phoneNumber="+918086606605"
+                    message=" 🚨Enquiry alert"
                   />
                 </div>
               </div>

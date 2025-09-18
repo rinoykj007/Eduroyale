@@ -9,8 +9,8 @@ const Contact = () => {
     {
       icon: <FaPhone className="text-2xl" />,
       title: "Phone",
-      details: "+91 906 124 3772",
-      link: "tel:+919061243772",
+      details: "+91 808 660 6605",
+      link: "tel:+918086606605",
     },
     {
       icon: <FaEnvelope className="text-2xl" />,
@@ -127,7 +127,7 @@ const Contact = () => {
       </div>
       <WhatsAppButton
         phoneNumber={WHATSAPP_NUMBER}
-        message="Hi, I'd like to get in touch with you!"
+        message="💬 Hi, I'd like to get in touch with you!"
       />
     </div>
   );

@@ -318,7 +318,10 @@ const BankLoan = () => {
           </div>
         </motion.div>
       </div>
-      <WhatsAppButton phoneNumber={WHATSAPP_NUMBER} />
+      <WhatsAppButton
+        phoneNumber={WHATSAPP_NUMBER}
+        message="💰 Hi, I need assistance with bank loan services for my studies!"
+      />
     </div>
   );
 };

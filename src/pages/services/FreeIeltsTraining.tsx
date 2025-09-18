@@ -24,11 +24,11 @@ const FreeIeltsTraining = () => {
                 </span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Unlock your potential with our comprehensive IELTS preparation program. 
-                Expert guidance to achieve your target score.
+                Unlock your potential with our comprehensive IELTS preparation
+                program. Expert guidance to achieve your target score.
               </p>
             </div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ const FreeIeltsTraining = () => {
                 autoplay={true}
                 rendererSettings={{
                   preserveAspectRatio: "xMidYMid slice",
-                  progressiveLoad: true
+                  progressiveLoad: true,
                 }}
               />
             </div>
@@ -72,7 +72,7 @@ const FreeIeltsTraining = () => {
         </div>
 
         {/* IELTS Modules */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -110,17 +110,21 @@ const FreeIeltsTraining = () => {
               viewport={{ once: true }}
               className="bg-white/90 backdrop-blur-lg rounded-xl p-4 sm:p-6 hover:bg-white/95 transition-all duration-300 shadow-sm hover:shadow-md group"
             >
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 transform group-hover:scale-110 transition-transform duration-300">{module.icon}</div>
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                {module.icon}
+              </div>
               <h3 className="text-lg sm:text-xl font-semibold mb-2 text-[#2B6CB0]">
                 {module.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">{module.description}</p>
+              <p className="text-gray-600 leading-relaxed">
+                {module.description}
+              </p>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Training Features */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -170,11 +174,15 @@ const FreeIeltsTraining = () => {
               viewport={{ once: true }}
               className="bg-white/90 backdrop-blur-lg rounded-xl p-4 sm:p-6 hover:bg-white/95 transition-all duration-300 shadow-sm hover:shadow-md group"
             >
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 transform group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                {feature.icon}
+              </div>
               <h3 className="text-lg sm:text-xl font-semibold mb-2 text-[#2B6CB0]">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <p className="text-gray-600 leading-relaxed">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </motion.div>
@@ -245,7 +253,10 @@ const FreeIeltsTraining = () => {
                 </div>
                 <ul className="space-y-3">
                   {phase.activities.map((activity, idx) => (
-                    <li key={idx} className="text-gray-600 flex items-center leading-relaxed">
+                    <li
+                      key={idx}
+                      className="text-gray-600 flex items-center leading-relaxed"
+                    >
                       <span className="w-1.5 h-1.5 bg-[#3182CE] rounded-full mr-2 flex-shrink-0"></span>
                       {activity}
                     </li>
@@ -302,7 +313,9 @@ const FreeIeltsTraining = () => {
                 <h3 className="text-lg sm:text-xl font-semibold mb-2 text-[#2B6CB0]">
                   {story.name}
                 </h3>
-                <p className="text-gray-600 italic leading-relaxed">"{story.quote}"</p>
+                <p className="text-gray-600 italic leading-relaxed">
+                  "{story.quote}"
+                </p>
               </motion.div>
             ))}
           </div>
@@ -324,7 +337,7 @@ const FreeIeltsTraining = () => {
               Join our free IELTS training program and take the first step
               towards achieving your target score.
             </p>
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-[#3182CE] text-white px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold hover:bg-[#2B6CB0] transition-colors duration-300 shadow-sm hover:shadow-md"
@@ -335,9 +348,9 @@ const FreeIeltsTraining = () => {
         </motion.div>
       </div>
       <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50">
-        <WhatsAppButton 
-          phoneNumber={WHATSAPP_NUMBER} 
-          message="Hi, I'm interested in free IELTS training!"
+        <WhatsAppButton
+          phoneNumber={WHATSAPP_NUMBER}
+          message="📚 Hi, I'm interested in free IELTS training!"
         />
       </div>
     </div>

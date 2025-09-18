@@ -439,7 +439,7 @@ const CountrySelection = () => {
       </div>
       <WhatsAppButton
         phoneNumber={WHATSAPP_NUMBER}
-        message="Hi, I need help with country selection for my studies!"
+        message="🌍 Hi, I need help with country selection for my studies!"
       />
     </>
   );

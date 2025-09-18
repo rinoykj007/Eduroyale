@@ -929,7 +929,7 @@ const Courses = () => {
         </motion.div>
         <WhatsAppButton
           phoneNumber={WHATSAPP_NUMBER}
-          message="Hi, I'm interested in learning more about your courses!"
+          message="⚠️ Enquiry alert"
         />
       </main>
     </div>

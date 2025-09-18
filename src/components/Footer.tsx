@@ -289,11 +289,10 @@ const Footer = () => {
                 KOLLAM
               </h4>
               <div className="text-lg font-bold mb-2 hover:text-blue-300 transition-colors duration-300 font-poppins">
-                (+91) 8086 606 605
+                (+91) 808 660 6605
               </div>
               <ul className="space-y-2 text-xs font-poppins">
-                <li className="text-gray-300">Tel: (+91) 474 2750005</li>
-                <li className="text-gray-300">Fax: (+91) 474 2750005</li>
+                <li className="text-gray-300">Tel: (+91) 999 505 8202</li>
                 <li className="text-gray-300 mt-2">
                   <div className="flex items-center mb-2">
                     <svg
@@ -373,10 +372,10 @@ const Footer = () => {
                 TRIVANDRUM
               </h4>
               <div className="text-lg font-bold mb-2 hover:text-blue-300 transition-colors duration-300 font-poppins">
-                (+91) 9995 058 202
+                (+91) 808 660 6605
               </div>
               <ul className="space-y-2 text-xs font-poppins">
-                <li className="text-gray-300">Tel: (+91) 9746 677 711</li>
+                <li className="text-gray-300">Tel: (+91) 974 667 7711</li>
                 <li className="text-gray-300 mt-2">
                   <div className="flex items-center mb-2">
                     <svg

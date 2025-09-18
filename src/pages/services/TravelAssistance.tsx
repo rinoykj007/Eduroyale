@@ -130,7 +130,7 @@ const TravelAssistance = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <WhatsAppButton
           phoneNumber={WHATSAPP_NUMBER}
-          message="Hi, I need information about travel assistance services!"
+          message="✈️ Hi, I need information about travel assistance services!"
         />
       </div>
     </div>

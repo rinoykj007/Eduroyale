@@ -285,7 +285,7 @@ const CourseSelection = () => {
       </div>
       <WhatsAppButton
         phoneNumber={WHATSAPP_NUMBER}
-        message="Hi, I need help with Course Selection. Can you guide me through the options available?"
+        message="📖 Hi, I need help with Course Selection. Can you guide me through the options available?"
       />
     </div>
   );

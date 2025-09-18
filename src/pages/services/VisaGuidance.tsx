@@ -263,7 +263,7 @@ const VisaGuidance = () => {
       </div>
       <WhatsAppButton
         phoneNumber={WHATSAPP_NUMBER}
-        message="Hi, I need assistance with visa application!"
+        message="🛂 Hi, I need assistance with visa application!"
       />
     </div>
   );
