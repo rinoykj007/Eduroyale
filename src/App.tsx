@@ -16,6 +16,7 @@ import TravelAssistance from "./pages/services/TravelAssistance";
 import FreeIeltsTraining from "./pages/services/FreeIeltsTraining";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ScrollToTop from "./components/ScrollToTop";
 
 // Placeholder components
@@ -75,6 +76,7 @@ function App() {
             <Route path="/services/*" element={<Services />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

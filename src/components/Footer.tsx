@@ -257,6 +257,15 @@ const Footer = () => {
                       Reviews
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      to="/privacy-policy"
+                      className="text-gray-300 hover:text-blue-300 transition-colors flex items-center"
+                    >
+                      <span className="text-blue-400/80 mr-2">›</span> Privacy
+                      Policy
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -513,9 +522,18 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-6 pt-4 border-t border-blue-900/30 text-center">
-          <p className="text-gray-400 hover:text-blue-300 transition-colors duration-300 font-poppins text-xs">
-            &copy; {new Date().getFullYear()} EDUROYALE. All Rights Reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xs">
+            <p className="text-gray-400 hover:text-blue-300 transition-colors duration-300 font-poppins">
+              &copy; {new Date().getFullYear()} EDUROYALE. All Rights Reserved.
+            </p>
+            <span className="hidden sm:inline text-gray-500">|</span>
+            <Link
+              to="/privacy-policy"
+              className="text-gray-400 hover:text-blue-300 transition-colors duration-300 font-poppins flex items-center"
+            >
+              <span className="text-blue-400/80 mr-1"></span> Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
