@@ -13,28 +13,25 @@ const Home = () => {
   // Make sure this testimonials array is defined
   const testimonials = [
     {
-      text: "EduAbroadConsult made my dream of studying abroad a reality. Their guidance was invaluable throughout the entire process.",
-      name: "John Doe",
-      university: "University of XYZ",
-      image: "https://randomuser.me/api/portraits/men/1.jpg",
+      text: " I’m incredibly grateful to the entire team at Eduroyale for their exceptional support and guidance throughout my journey to study abroad. From the very beginning, they made the process smooth, transparent, and stress-free. A special mention to Maya, Sanuja, Cerina, and Sumesh Sir – your constant support, prompt responses, and genuine care truly made a difference. Whether it was choosing the right course, handling documentation, or preparing for the visa process, your assistance was spot on at every stage. Thank you once again! 🌍✈📚",
+      name: "ASHWIN GIRISH",
+      university: "MAYNOOTH UNIVERSITY",
+      image:
+        "https://image2url.com/images/1760544000533-dcf45161-2e68-4a20-a827-fe6d45b74372.jpg",
     },
     {
-      text: "I couldn't have navigated the complex application process without EduAbroadConsult. They were there every step of the way.",
-      name: "Jane Smith",
-      university: "ABC University",
-      image: "https://randomuser.me/api/portraits/women/2.jpg",
+      text: "It was a wonderful experience with the Eduroyale and the staffs were caring and very supportive due to which I got admission in TUS in Ireland. It's been 6 months now and I am very glad for the support and trust they had in me.",
+      name: "NITESH LEENA",
+      university: "TUS, IRELAND",
+      image:
+        "https://image2url.com/images/1760544259444-e571ff49-05bd-43c2-b8da-f7237c403198.jpg",
     },
     {
-      text: "Thanks to EduAbroadConsult, I'm now studying at my dream university. Their expertise and support were crucial to my success.",
-      name: "Mike Johnson",
-      university: "Global Institute",
-      image: "https://randomuser.me/api/portraits/men/3.jpg",
-    },
-    {
-      text: "The personalized attention I received from EduAbroadConsult was amazing. They truly care about each student's journey.",
-      name: "Emily Brown",
-      university: "International College",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
+      text: "This agency is truly genuine and student-focused. They guided me to top-ranked universities with great reputations instead of just random options. Maya’s insights were spot on in finding the right fit, Celeena made the visa process smooth, and Sumesh sir was very supportive before my VFS day. I asked them countless questions, and they were always patient and helpful. A trustworthy team that really cares about students!",
+      name: "SIDHARTH",
+      university: "UNIVERSITY OF EXETER , UK",
+      image:
+        "https://image2url.com/images/1760544382932-5975d31e-89e1-43f9-ba06-972a6c5dfc22.jpg",
     },
   ];
 
